@@ -15,4 +15,15 @@ So the command should be
 
 <pre>uname -mo</pre>
 
-It obviously should be running the same kernel, since the VPS is the same all accross the board for each Prowl employee. 
+It obviously should be running the same kernel, since the VPS is the same all accross the board for each Prowl employee. Depending on what Prowl VPS you're on, you may need to update Docker, so run 
+
+<pre>sudo apt-get remove docker docker-engine</pre>
+
+The contents of /var/lib/docker/, including images, containers, volumes, and networks, are preserved. The Docker CE package is now called docker-ce, and the Docker EE package is now called docker-ee.
+
+Now run to install Docker 
+
+<pre>sudo apt-get update
+     sudo apt-get install \
+     linux-image-extra-$(uname -r) \
+     linux-image-extra-virtual</pre>

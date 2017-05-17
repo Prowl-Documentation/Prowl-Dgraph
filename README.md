@@ -126,3 +126,16 @@ Then try running Dgraph again
 This is how it should look if you followed the instructions correctly 
 
 <img src="https://www.getprowl.com/assets/images/dgraph.png" alt="dgraph" width="651" height="498">
+
+<h1 align="center">Hooks</h1>
+
+Model hooks are available on both serialization and deserialization. These can be used to control what of the model data gets serialized (eg. sent to the client) or what will gets written into the model after deserialization.
+
+Here are the available callbacks (can be directly implemented on the `DataObject` or in a `DataExtension`)
+
+Signature | Parameter type | Info 
+--- | :---: | ---
+`onBeforeDeserialize(&$data)` | `string` | Called before the raw JSON is being parsed. You get access to the raw JSON data sent by the client.
+`onAfterDeserialize(&$data)` | `array` | Called after JSON has been deserialized into an array map. You can modify this array to prevent incoming values to be applied to your model (sanitize incoming data).
+
+This of course is to parse the JSON information you are getting from Dgraph, this is a feature within Prowl. In conclusion, Dgraph is a quick way to search for information Prowl collects, it wouldn't be our main way to search for data, but for on the go situations, this is very ideal. 

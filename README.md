@@ -103,3 +103,7 @@ Now via the information we get from the Prowlbox, we can search using Dgraph via
         }
     ]
 }</pre>
+
+Some of the Docker engines have problems with Dgraph, so troubleshoot via 
+
+<pre>docker run -it dgraph/dgraph bash</pre>

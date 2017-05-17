@@ -27,3 +27,10 @@ Now run to install Docker
 sudo apt-get install \
 linux-image-extra-$(uname -r) \
 linux-image-extra-virtual</pre>
+
+Now we are going to add the Docker repo, since all our VPS's are on 64-bit, you need to run 
+
+<pre>sudo add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+(lsb_release -cs) \
+stable"</pre>

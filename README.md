@@ -213,3 +213,5 @@ Signature | Parameter type | Info
 `onAfterDeserialize(&$data)` | `array` | Called after JSON has been deserialized into an array map. You can modify this array to prevent incoming values to be applied to your model (sanitize incoming data).
 
 This of course is to parse the JSON information you are getting from Dgraph, this is a feature within Prowl. In conclusion, Dgraph is a quick way to search for information Prowl collects, it wouldn't be our main way to search for data, but for on the go situations, this is very ideal. 
+
+Written by Montana Mendy. MIT license. 

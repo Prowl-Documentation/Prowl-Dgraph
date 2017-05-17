@@ -56,6 +56,8 @@ Make sure you're connected to your VPS you're assigned to, we call this at Prowl
 | Docker  | 10.8.23.95                 | 10.0.1.3         |
 | Docker2 | 10.8.23.95                 | 10.0.1.3         |
 
+The Docker client will honor the DOCKER_HOST environment variable to set the -H flag for the client.
+
 <h1 align="center">Installing Docker using DigitalOcean</h1>
 
 Prowl also uses DigitalOcean in some instances for VPS's, we have our own VPS's but sometimes we use DigitalOcean. So let's get started installing Docker on DigitalOcean. Let's create a user 

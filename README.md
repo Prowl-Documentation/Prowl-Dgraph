@@ -56,6 +56,80 @@ Make sure you're connected to your VPS you're assigned to, we call this at Prowl
 | Docker  | 10.8.23.95                 | 10.0.1.3         |
 | Docker2 | 10.8.23.95                 | 10.0.1.3         |
 
+<h1 align="center">Installing Docker using DigitalOcean</h1>
+
+Prowl also uses DigitalOcean in some instances for VPS's, we have our own VPS's but sometimes we use DigitalOcean. So let's get started installing Docker on DigitalOcean. Let's create a user 
+
+<pre>sudo useradd -m -d /home/PROWL -s /bin/bash -U PROWL</pre> 
+
+Now get a password
+
+<pre>passwd USER</pre>
+
+Since all Prowl employees have access to the DigitalOcean account, we will use groupadd
+
+<pre>groupadd admin && usermod -a -G admin PROWL</pre>
+
+Login with
+
+<pre>su PROWL</pre>
+
+Go to the home directory in the VPS 
+
+<pre>cd ~/</pre>
+
+Now we need to update, and install dependencies
+
+<pre>sudo apt-get update
+sudo apt-get install linux-image-extra-`uname -r`</pre>
+
+You'll be prompted with a screen select the following 
+
+<pre>keep the local version currently installed</pre>
+
+Now we need to install Go, which is what Docker is written in 
+
+<pre>wget http://go.googlecode.com/files/go1.1.1.linux-amd64.tar.gz
+tar xf go1.1.1.linux-amd64.tar.gz
+rm go1.1.1.linux-amd64.tar.gz</pre>
+
+Now we are going to add some environment variables
+
+<pre>echo "export GOROOT=\$HOME/go" >> ~/.profile
+echo "PATH=$PATH:\$GOROOT/bin" >> ~/.profile
+source ~/.profile</pre>
+
+Now it's time to actually install Docker 
+
+<pre>sudo apt-get install lxc curl xz-utils git mercurial</pre>
+
+Create this folder
+
+<pre>mkdir -p $GOPATH/src/github.com/dotcloud</pre>
+
+You'll want to change directories and clone the Docker image from GitHub
+
+<pre>cd $GOPATH/src/github.com/dotcloud
+git clone https://github.com/dotcloud/docker.git</pre>
+
+Now let's symlink Docker
+
+<pre>sudo ln -s $GOPATH/bin/docker /usr/local/bin/docker</pre>
+
+Let's run Docker
+
+<pre>sudo docker -d &</pre>
+
+Once you've made sure Docker is installed correctly, let's pull some base files
+
+<pre>docker pull base</pre>
+
+Now, let's open a Prowl test container to test if everything is working correctly
+
+<pre>docker run -t base /bin/echo "Hello, world."</pre>
+
+There you go, you now have installed Docker using a DigitalOcean VPS that we use.
+
 <h1 align="center">Dgraph Installation</h1>
 
 Clear all the pre existing Docker information, now run 

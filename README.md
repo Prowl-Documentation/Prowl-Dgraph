@@ -24,6 +24,6 @@ The contents of /var/lib/docker/, including images, containers, volumes, and net
 Now run to install Docker 
 
 <pre>sudo apt-get update
-     sudo apt-get install \
-     linux-image-extra-$(uname -r) \
-     linux-image-extra-virtual</pre>
+sudo apt-get install \
+linux-image-extra-$(uname -r) \
+linux-image-extra-virtual</pre>

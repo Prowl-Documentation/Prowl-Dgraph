@@ -63,7 +63,7 @@ Assuming you have Docker installed and followed earlier instructions, pull Dgrap
 
 <pre>docker pull dgraph/dgraph</pre> 
 
-Now you can actually run the dgraph command, by simply running: 
+Now you can actually run the dgraph command, by simply running
 
 <pre>dgraph</pre> 
 
@@ -73,7 +73,7 @@ In this case, we are going to be binding dgraph on port 4040, run
 # Mapping port 4040 from within the container to 9090  of the instance
 docker run -it -p 9090:4040 -v ~/dgraph:/dgraph dgraph/dgraph dgraph --bindall=true</pre>
 
-Now via the information we get from the Prowlbox, we can search using Dgraph via mutation. An example of this, would be the following JSON contents: 
+Now via the information we get from the Prowlbox, we can search using Dgraph via mutation. An example of this, would be the following JSON contents
 
 <pre>{
     "me": [

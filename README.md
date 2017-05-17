@@ -7,7 +7,7 @@ First access the Prowl VPS that all Prowl employees should haves access to. Make
 
 <pre>uname</pre>
 
-I suggest you use the flags when running uname 
+I suggest you use these flags when running uname 
 
 <pre>m, o</pre>
 

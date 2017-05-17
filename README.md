@@ -214,4 +214,3 @@ Signature | Parameter type | Info
 
 This of course is to parse the JSON information you are getting from Dgraph, this is a feature within Prowl. In conclusion, Dgraph is a quick way to search for information Prowl collects, it wouldn't be our main way to search for data, but for on the go situations, this is very ideal. 
 
-Written by Montana Mendy. MIT license. 

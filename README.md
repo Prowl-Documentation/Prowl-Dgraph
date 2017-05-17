@@ -47,6 +47,15 @@ Alternatively you can run
 
 <pre>sudo docker run hello-world</pre>
 
+Make sure you're connected to your VPS you're assigned to, we call this at Prowl the "VPS" cluster, this is all stated in our private repo of information, it should look something like this in the interface
+
+| VPS   | Private IP address  (ethN) | VPN IP address (wg0) |
+| ----- | -------------------------- | -------------------- |
+| VPS1    | 10.8.23.93                 | 10.0.1.1         |
+| VPS2    | 10.8.23.94                 | 10.0.1.2         |
+| Docker  | 10.8.23.95                 | 10.0.1.3         |
+| Docker2 | 10.8.23.95                 | 10.0.1.3         |
+
 <h1 align="center">Dgraph Installation</h1>
 
 Clear all the pre existing Docker information, now run 

@@ -125,4 +125,4 @@ Then try running Dgraph again
 
 This is how it should look if you followed the instructions correctly 
 
-<img src="https://www.getprowl.com/assets/images/dgraph.png" alt="dgraph" width="530" height="300">
+<img src="https://www.getprowl.com/assets/images/dgraph.png" alt="dgraph" width="630" height="400">

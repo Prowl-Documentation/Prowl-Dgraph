@@ -120,3 +120,9 @@ Some of the Docker engines have problems with Dgraph, so troubleshoot via
 Then try running Dgraph again
 
 <pre>dgraph</pre>
+
+<h1 align="center">How it should look</h1>
+
+This is how it should look if you followed the instructions correctly 
+
+![dgraph](http://getprowl.com/assets/images/dgraph.png)

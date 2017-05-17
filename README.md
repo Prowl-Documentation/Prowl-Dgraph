@@ -47,7 +47,7 @@ Alternatively you can run
 
 <pre>sudo docker run hello-world</pre>
 
-Make sure you're connected to your VPS you're assigned to, we call this at Prowl the "VPS" cluster, this is all stated in our private repo of information, it should look something like this in the interface
+Make sure you're connected to your VPS you're assigned to, we call this at Prowl the "VPS Cluster", this is all stated in our private repo of information, it should look something like this in the interface
 
 | VPS   | Private IP address  (ethN) | VPN IP address (wg0) |
 | ----- | -------------------------- | -------------------- |

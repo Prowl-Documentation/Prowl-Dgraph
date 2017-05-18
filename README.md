@@ -47,7 +47,7 @@ Alternatively you can run
 
 <pre>sudo docker run hello-world</pre>
 
-Make sure you're connected to your VPS you're assigned to, we call this at Prowl the "VPS Cluster", this is all stated in our private repo of information, it should look something like this in the interface. For the VPS clusters we use Docker Compose is great for development, testing, and staging environments, as well as CI workflows. You can learn more about each case in
+Make sure you're connected to your VPS you're assigned to, we call this at Prowl the "VPS Cluster", this is all stated in our private repo of information, it should look something like this in the interface. For the VPS clusters we use Docker Compose for Prowl it's great for development, testing, and staging environments, as well as CI workflows. You can learn more about each case in
 [Common Use Cases](https://github.com/docker/docker.github.io/blob/master/compose/overview.md#common-use-cases).
 
 | VPS   | Private IP address  (ethN) | VPN IP address (wg0) |

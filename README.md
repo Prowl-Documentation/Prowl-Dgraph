@@ -57,7 +57,10 @@ Make sure you're connected to your VPS you're assigned to, we call this at Prowl
 | Docker  | 10.8.23.95                 | 10.0.1.3         |
 | Docker2 | 10.8.23.95                 | 10.0.1.3         |
 
-The Docker client will honor the DOCKER_HOST environment variable to set the -H flag for the client.
+The Docker client will honor the DOCKER_HOST environment variable to set the -H flag for the client. The unknown directive is treated as a comment due to not being recognized. In addition, the known directive is treated as a comment due to appearing after a comment which is not a parser directive.
+
+<pre>unknowndirective=value
+knowndirective=value</pre>
 
 <h1 align="center">Installing Docker using DigitalOcean</h1>
 
